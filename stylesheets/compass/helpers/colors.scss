@@ -1,0 +1,31 @@
+//These color functions are useful for creating generic libraries that have to accept a range of inputs.
+
+//Adds $amount to $color's lightness value. $amount can be negative.
+@function adjust-lightness($color, $amount) {
+	@return adjust_color($color, $lightness: $amount);
+}
+
+//Adds $amount to $color's saturation value. $amount can be negative.
+@function adjust-saturation($color, $amount) {
+	@return adjust_color($color, $saturation: $amount);
+}
+
+//Scales $color's lightness value by $amount. $amount can be negative.
+@function scale-lightness($color, $amount) {
+	@return scale_color($color, $lightness: $amount);
+}
+
+//Scales $color's saturation value by $amount. $amount can be negative.
+@function scale-saturation($color, $amount) {
+	@return scale_color($color, $saturation: $amount);
+}
+
+//Darkens the $color by mixing it with black as specified by $percentage.
+@function shade($color, $percentage) {
+	@return darken($color, $amount);
+}
+
+//Lightens the $color by mixing it with white as specified by $percentage.
+@function tint($color, $percentage) {
+	@return ligthen($color, $amount);
+}
